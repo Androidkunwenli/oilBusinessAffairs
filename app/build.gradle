@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.qmy.yzsw"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "e08bbb469dffa15506ebe248", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //注解fbc
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //工具类
+    implementation 'com.blankj:utilcode:1.17.3'
+    //日志工具类
+    implementation 'com.orhanobut:logger:2.2.0'
+    //json 格式化
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //列表
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.36'
+    //广播
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //圆形图片
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //图片加载
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    // If you want to use the GPU Filters
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    //最新版本
+    //框架
+    implementation 'com.youth.xframe:xframe:1.1.2'
+    //网络请求
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //tab
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //照片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //地址选择
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    //背景
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation project(':citypicker')
+
+    implementation 'cn.jiguang.sdk:jpush:3.1.5'
+    // 此处以JPush 3.1.5 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.3'
+    // 此处以JCore 1.2.3 版本为例。
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation(name: 'NaviTts', ext: 'aar')
+    implementation(name: 'onsdk_all', ext: 'aar')
+
+    implementation 'com.pgyersdk:sdk:2.8.1'
+}

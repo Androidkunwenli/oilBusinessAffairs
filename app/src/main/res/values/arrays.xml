@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spingarr">
+        <item>92#</item>
+        <item>95#</item>
+        <item>98#</item>
+        <item>0 #</item>
+        <item>-10#</item>
+        <item>-20#</item>
+        <item>LNG</item>
+        <item>CNG</item>
+        <item>充电桩</item>
+    </string-array>
+</resources>

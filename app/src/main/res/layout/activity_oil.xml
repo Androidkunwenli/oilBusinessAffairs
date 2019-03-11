@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_layout_height"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="13dp"
+            android:background="@drawable/dr_white_ellipse"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_oil_msg" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/map_oil_type"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ninetytwo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="92#"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/ninetyfive"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="95#"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/ninetyeight"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="98#"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="0  #"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/ten"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="-10#"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/twenty"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="-20#"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/lng"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="LNG"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/cng"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="CNG"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/charging"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="充电桩"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

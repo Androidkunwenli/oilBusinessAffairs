@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进油日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_imcomeDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="油品种类及标号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <Spinner
+                    android:id="@+id/spinner_oil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@mipmap/ic_dropdown_box"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_oilsType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@mipmap/ic_dropdown_box"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/et_oilsType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="供油单位名称及许可证编号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_providerLicense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="供油单位联系电话："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_providerTel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:inputType="phone"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="供货商单位编号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_providerSendNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="危化品运输资格证明及编号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_dangerousNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="罐车牌号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_carNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="司机资格证明及编号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_driverNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="油品重量："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_incomeNum"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:inputType="numberDecimal"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吨"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_density"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:inputType="numberDecimal"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密度kg/m³"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_litre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="升"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="卸入油罐编号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_intoPotNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="送货人签名："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_sendUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="验收员签名："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_checkUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="站长签名："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_stationLeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/d8" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="质量验收员对油品质量、外观、感观检验情况说明："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/dr_problem_feedback_d8"
+                android:gravity="left"
+                android:minHeight="80dp"
+                android:padding="5dp"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_submission"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

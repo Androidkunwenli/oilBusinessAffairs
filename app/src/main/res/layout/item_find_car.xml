@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/enterpriseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="企业名称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/image_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:src="@mipmap/ic_update_state"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/carCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="92#50吨 | 95#20吨"
+        android:textSize="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/pickUpAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:drawableLeft="@mipmap/ic_obtain"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="地址"
+        android:textSize="@dimen/sp_12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp">
+
+        <TextView
+            android:id="@+id/sendAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_collect"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="地址"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/createTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="10分钟前"
+            android:textSize="@dimen/sp_12" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/background"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp" />
+</LinearLayout>

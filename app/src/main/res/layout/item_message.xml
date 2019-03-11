@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="13dp">
+
+        <ImageView
+            android:id="@+id/image_message_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:src="@mipmap/ic_message" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="系统消息 2018-06-06 18:45"
+                android:textColor="@color/text"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/message_background"
+                android:minHeight="60dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="5dp"
+                android:text="直播吧8月2日讯 据《马卡报》报道，皇马后卫纳乔在社交平台上晒出自己在球队和曼联的友谊赛中带着队长袖标的照片，队友莫德里奇在这条动态下评论。 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

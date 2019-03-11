@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/dr_problem_feedback_gray"
+        android:drawableLeft="@mipmap/ic_search"
+        android:drawablePadding="13dp"
+        android:hint="请输入关键字词"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="13dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="@dimen/sp_12" />
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_layout_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_layout_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/ic_default_screen_choice"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="时间排序"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_layout_file_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_layout_file_resource"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableRight="@mipmap/ic_default_screen_choice"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="筛选"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_submission_report_form"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="报表提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

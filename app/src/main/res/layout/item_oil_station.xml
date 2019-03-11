@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/image_message"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/ic_xinxiluru" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:text="信息录入"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

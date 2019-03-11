@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qmy.yzsw">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--//获取设备网络状态，禁用后无法获取网络状态-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--//网络权限，当禁用后，无法进行检索等相关业务-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--//读取设备硬件信息，统计数据-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--//读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--//获取设备的网络状态，鉴权所需网络代理-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--//允许sd卡写权限，需写入地图数据，禁用后无法显示地图-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--//获取统计数据-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--//鉴权所需该权限获取进程列表-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--//使用步行AR导航，配置Camera权限-->
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 获取logcat日志 -->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".YawsApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_yzsw_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="001f2e884d81b7991269cc112047acad" />
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="48ae76de3f" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="hUH2yWRuQ2VjWgc5pgKPG1hK4B1quONb" />
+
+        <activity android:name="com.qmy.yzsw.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.InformationEntryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.LicenceUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LicenceRemindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LocationAdministrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SuperviseAdmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FindCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LeaseReleaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.ReportFormAdmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DefaultCityPickerTheme" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TransportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShoppingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LeaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeConsultationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SupplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SuperviseReleaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.MyLeaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.OilMsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ModifyOilPriceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.TransportReleaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.CollectionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.TransportMsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OnlineFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubmissionReportFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VehicleUreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FillUpTheAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HiddenDangerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RefinedOilSalesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MySubmissionReportFormActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1107738743" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+        <!--<receiver-->
+        <!--android:name=".receiver.JpushReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.intent.REGISTRATION" />-->
+        <!--<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />-->
+        <!--<action android:name="cn.jpush.android.intent.CONNECTION" />-->
+
+        <!--<category android:name="com.qmy.yzsw" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+    </application>
+
+</manifest>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginBackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_lease_turn"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="租赁类型 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <!--<EditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:textSize="@dimen/sp_12" />-->
+                <RadioGroup
+                    android:id="@+id/rg_lease"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rg_lease_lease"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="出租"
+                        android:textSize="@dimen/sp_12" />
+
+                    <RadioButton
+                        android:id="@+id/rg_lease_turn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="转让"
+                        android:textSize="@dimen/sp_12" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="油站名称 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <EditText
+                    android:id="@+id/oilname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="(请填写加油站全称)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="所在地区 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/provinceName_cityName_countyName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="(请选择您所在的区域)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="详细地址 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <EditText
+                    android:id="@+id/oiladdress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="(例如xxx街道xxx号)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:id="@+id/ll_leasetime"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="租赁年限 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/leasetime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="(请选择您要出租的时间)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:id="@+id/tv_leasemoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="租金价格 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <EditText
+                    android:id="@+id/leasemoney"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="万元/年"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="联&#160;系&#160;&#160;人 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <EditText
+                    android:id="@+id/contacts"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:drawableLeft="@mipmap/ic_stars"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_stars"
+                    android:text="联系电话 ："
+                    android:textSize="@dimen/sp_12" />
+
+                <EditText
+                    android:id="@+id/contactphone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgFile1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_oil_photo" />
+
+                <ImageView
+                    android:id="@+id/imgFile2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_oil_photo" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_submission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/ic_information_submission"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_myself"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width=".5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_opType_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:layout_width=".5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_opType_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="已成交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</LinearLayout>

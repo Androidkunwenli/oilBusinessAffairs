@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <ImageView
+            android:id="@+id/image_message"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:src="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_oil_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="中国石油一号站建华店"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_oil_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="长安街建华北大街156号"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_oil_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="10分钟前"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".1dp"
+        android:background="@color/background" />
+</LinearLayout>

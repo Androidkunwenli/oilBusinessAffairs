@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_oil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_oil"
+            android:gravity="center"
+            android:text="今日油价"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_supply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_supply"
+            android:gravity="center"
+            android:text="现货供应"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_home_consultation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_home_consultation"
+            android:gravity="center"
+            android:text="今日资讯"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_lease"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_lease"
+            android:gravity="center"
+            android:text="油站租赁"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_shopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_shopping"
+            android:gravity="center"
+            android:text="现货求购"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_transport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_transport"
+            android:gravity="center"
+            android:text="危货运输"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/loginBackground" />
+</LinearLayout>

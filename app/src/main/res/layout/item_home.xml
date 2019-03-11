@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@color/background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="热点资讯"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="8dp"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_list" />
+
+        <View
+            android:id="@+id/v_division_1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_list" />
+
+        <View
+            android:id="@+id/v_division_2"
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/image_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_list" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content_str"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_view_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="3dp"
+        android:drawableLeft="@mipmap/ic_browse"
+        android:drawablePadding="5dp"
+        android:drawableStart="@mipmap/ic_browse"
+        android:gravity="center"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:text="1313"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/background" />
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map_oil_modify_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title_str"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:text="修改昵称"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/map_oil_modify_price"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp">
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:hint="请输入要修改的昵称"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width=".5dp"
+            android:layout_height="match_parent"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+</LinearLayout>

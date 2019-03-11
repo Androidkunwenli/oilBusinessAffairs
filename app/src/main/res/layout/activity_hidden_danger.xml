@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_checkDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查人："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/et_checkUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@color/d8" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="13dp"
+                android:paddingRight="13dp"
+                android:text="检查发现的主要问题（简述）："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_checkRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/dr_problem_feedback_d8"
+                android:gravity="left"
+                android:minHeight="80dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="整改日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_rectifyDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@color/d8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="13dp"
+                android:paddingRight="13dp"
+                android:text="整改简况："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_rectifyRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/dr_problem_feedback_d8"
+                android:gravity="left"
+                android:minHeight="80dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="13dp"
+                android:paddingRight="13dp"
+                android:text="复查人："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_reCheckUser"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@color/d8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="复查日期："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_reCheckDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@color/d8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="13dp"
+                android:paddingRight="13dp"
+                android:text="备注："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/dr_problem_feedback_d8"
+                android:gravity="left"
+                android:minHeight="80dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_submission"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
